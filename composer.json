@@ -1,0 +1,12 @@
+{
+    "name": "foundation/module-cms",
+    "description": "Display Featured product(s)",
+    "type": "magento2-module",
+    "require": {},
+    "autoload": {
+        "files": ["registration.php"],
+        "psr-4": {
+            "Foundation\\FeaturedProduct\\": ""
+        }
+    }
+}

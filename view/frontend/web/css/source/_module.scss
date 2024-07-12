@@ -1,0 +1,39 @@
+.featured-products {
+
+
+    &__item {
+        display:flex;
+
+    }
+
+    &__img {}
+
+    &__desc {}
+
+    &__price {}
+
+    &__link {}
+
+    &__right {}
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .featured-products {
+        &__item {
+            flex-direction: column;
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .featured-products {
+        &__item {
+            flex-direction: row;
+        }
+    }
+}
+

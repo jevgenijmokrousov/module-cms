@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <container name="homepage.featured.container" htmlTag="section" before="-">
+                <block class="Foundation\Cms\Block\FeaturedProduct" name="homepage.featured" template="Foundation_Cms::hyva/featured-products.phtml">
+
+                    <block class="Magento\Catalog\Pricing\Render" name="homepage.featured.product.price">
+                        <arguments>
+                            <argument name="price_render" xsi:type="string">product.price.render.default</argument>
+                            <argument name="price_type_code" xsi:type="string">final_price</argument>
+                            <argument name="zone" xsi:type="string">item_list</argument>
+                        </arguments>
+                    </block>
+
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

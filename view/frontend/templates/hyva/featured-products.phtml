@@ -1,0 +1,31 @@
+<?php
+
+use Magento\Framework\Escaper;
+/**
+ * @var \Foundation\Cms\Block\FeaturedProduct $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+?>
+
+<div class="featured-products">
+    <?php foreach($block->getProducts() as $product):?>
+        <?php /** @var \Magento\Catalog\Model\Product $product */ ?>
+        <div class="featured-products__item flex flex-col md:flex-row">
+            <div class="featured-product__img md:shrink-0">
+                <?= $block->getImageHtml($product); ?>
+            </div>
+            <div class="featured-product__right">
+                <h3><?= $escaper->escapeHtml($product->getName());?></h3>
+                <div class="featured-product__dsc">
+                    <?= $this->getProductDesc($product);?>
+                </div>
+                <div class="featured-product__price">
+                    <?= $block->getProductPriceHtml($product)?>
+                 </div>
+                <a class="featured-product__link" href="<?= $escaper->escapeUrl($product->getProductUrl()) ?>"><?= __('View Product')?></a>
+            </div>
+        </div>
+    <?php endforeach;?>
+</div>
+
+

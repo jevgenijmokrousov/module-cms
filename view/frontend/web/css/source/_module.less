@@ -1,0 +1,38 @@
+.featured-products {
+
+
+    &__item {
+        display:flex;
+    }
+
+    &__img {}
+
+    &__desc {}
+
+    &__price {}
+
+    &__link {}
+
+    &__right {}
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .featured-products {
+        &__item {
+            flex-direction: column;
+        }
+    }
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .featured-products {
+        &__item {
+            flex-direction: row;
+        }
+    }
+}
+
